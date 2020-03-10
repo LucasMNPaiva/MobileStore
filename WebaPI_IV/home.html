@@ -1,0 +1,59 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <form action="#" onsubmit="createUser()">
+        Username<input type="text" id="username" /><br>
+        Password <input type="password" id="password" /><br>
+        Email  <input type="email" id="email"><br>
+        <input type="submit">
+    </form>
+    <br>
+    <br>
+    Delete
+    ID :<input id="IdDelete">
+    <button onclick="DeleteUser()">DELETE</button>
+    <br>
+    <br>
+    <form action="#" onsubmit="UpdateUser()">
+        Id <input type="text" id="idUpdate"><br>
+        Username<input type="text" id="userUpdate" /><br>
+        Password <input type="password" id="passwordUpdate" /><br>
+        Email  <input type="email" id="emailUpdate"><br>
+        <input type="submit">
+    </form>
+
+    <br>
+    <br>
+
+    <label>Name Product:</label>
+    <input type="text" autocomplete="on" autofocus id="productName" required /><br />
+    <label>Price:</label>
+    <input type="text" id="productPrice" /><br />
+    <label>Image Upload:</label>
+    <input type="file" id="fileUpload" multiple />
+    <button onclick="CreateProduct()">Create</button>
+
+    <div></div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <script src="Scripts/file.js"></script>
+
+
+</body>
+</html>
