@@ -17,5 +17,9 @@ namespace WebaPI_IV.Controllers
         {
             return View();
         }
+        public ActionResult Password()
+        {
+            return View();
+        }
     }
 }
