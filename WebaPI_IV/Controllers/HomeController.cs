@@ -14,5 +14,12 @@ namespace WebaPI_IV.Controllers
 
             return View();
         }
+
+        public ActionResult Home()
+        {
+            ViewBag.Title = "Home Page";
+            return View("home");
+        }
+       
     }
 }

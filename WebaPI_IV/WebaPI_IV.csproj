@@ -163,6 +163,8 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\ClientController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\LoginViewController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
@@ -186,10 +188,27 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\bg-heading-03.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="home.html" />
+    <Content Include="Scripts\Gruntfile.js" />
+    <Content Include="Scripts\jquery.mask.js" />
+    <Content Include="Scripts\jquery.mask.min.js" />
+    <Content Include="Scripts\js\SignIn.js" />
+    <Content Include="Scripts\vendor\font-awesome-4.7\fonts\fontawesome-webfont.eot" />
+    <Content Include="Scripts\vendor\font-awesome-4.7\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Scripts\vendor\font-awesome-4.7\fonts\fontawesome-webfont.woff" />
+    <Content Include="Scripts\vendor\font-awesome-4.7\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Scripts\vendor\font-awesome-4.7\fonts\FontAwesome.otf" />
+    <Content Include="Scripts\vendor\mdi-font\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="Scripts\vendor\mdi-font\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="Scripts\vendor\mdi-font\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="Scripts\vendor\mdi-font\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="Scripts\mask.jquery.json" />
+    <None Include="Views\Home\home.cshtml">
+      <BrowseToURL>~/Home/home</BrowseToURL>
+    </None>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
@@ -217,7 +236,24 @@
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\js\global.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\vendor\datepicker\daterangepicker.css" />
+    <Content Include="Scripts\vendor\datepicker\daterangepicker.js" />
+    <Content Include="Scripts\vendor\datepicker\moment.min.js" />
+    <Content Include="Scripts\vendor\font-awesome-4.7\css\font-awesome.css" />
+    <Content Include="Scripts\vendor\font-awesome-4.7\css\font-awesome.min.css" />
+    <Content Include="Scripts\vendor\font-awesome-4.7\fonts\fontawesome-webfont.svg" />
+    <Content Include="Scripts\vendor\font-awesome-4.7\HELP-US-OUT.txt" />
+    <Content Include="Scripts\vendor\jquery\jquery.js" />
+    <Content Include="Scripts\vendor\jquery\jquery.min.js" />
+    <Content Include="Scripts\vendor\mdi-font\css\material-design-iconic-font.css" />
+    <Content Include="Scripts\vendor\mdi-font\css\material-design-iconic-font.min.css" />
+    <Content Include="Scripts\vendor\mdi-font\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="Scripts\vendor\select2\select2.min.css" />
+    <Content Include="Scripts\vendor\select2\select2.min.js" />
+    <Content Include="Content\main.css" />
+    <Content Include="Views\LoginView\images\bg-heading-03.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -232,11 +268,13 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\LoginView\Login.cshtml" />
+    <Content Include="Views\LoginView\SignIn.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Upload\" />
-    <Folder Include="Views\teste\" />
+    <Folder Include="Views\LoginView\css\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

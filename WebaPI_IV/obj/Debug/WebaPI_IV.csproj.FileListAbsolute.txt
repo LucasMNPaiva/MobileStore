@@ -1,4 +1,3 @@
-C:\Users\lucas.paiva\source\repos\WebAPI4\WebaPI_IV\obj\Debug\WebaPI_IV.csprojAssemblyReference.cache
 C:\Users\lucas.paiva\source\repos\WebAPI4\WebaPI_IV\bin\WebaPI_IV.dll.config
 C:\Users\lucas.paiva\source\repos\WebAPI4\WebaPI_IV\bin\WebaPI_IV.dll
 C:\Users\lucas.paiva\source\repos\WebAPI4\WebaPI_IV\bin\WebaPI_IV.pdb
@@ -95,3 +94,4 @@ C:\Users\lucas.paiva\source\repos\WebAPI4\WebaPI_IV\bin\pt-br\System.Web.WebPage
 C:\Users\lucas.paiva\source\repos\WebAPI4\WebaPI_IV\obj\Debug\WebaPI_IV.csproj.CopyComplete
 C:\Users\lucas.paiva\source\repos\WebAPI4\WebaPI_IV\obj\Debug\WebaPI_IV.dll
 C:\Users\lucas.paiva\source\repos\WebAPI4\WebaPI_IV\obj\Debug\WebaPI_IV.pdb
+C:\Users\lucas.paiva\source\repos\WebAPI4\WebaPI_IV\obj\Debug\WebaPI_IV.csprojAssemblyReference.cache
