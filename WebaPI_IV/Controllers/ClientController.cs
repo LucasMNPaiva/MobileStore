@@ -4,12 +4,15 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using WebaPI_IV.DataBase;
 using WebaPI_IV.Models.ModelClient;
 
 namespace WebaPI_IV.Controllers
 {
     public class ClientController : ApiController
     {
+
+        static readonly DataAccess data = new DataAccess();
         static readonly ClientRepository clientRepository = new ClientRepository();
         // GET: api/Client
         public IEnumerable<Client> GetAll()
@@ -59,5 +62,7 @@ namespace WebaPI_IV.Controllers
 
             clientRepository.Remove(id);
         }
+
+       
     }
 }

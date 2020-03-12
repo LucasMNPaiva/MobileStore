@@ -5,21 +5,23 @@ using System.IO;
 using System.Net;
 using System.Net.Mail;
 using System.Web.Http;
+using WebaPI_IV.DataBase;
 using WebaPI_IV.Models.ModelLogin;
 
 namespace WebaPI_IV.Controllers
 {
     public class LoginController : ApiController
     {
+        public DataAccess data = new DataAccess();
       
         [HttpPost]
-        public void NewPassword([FromBody]NewPassword response) {
+        public void NewPassword([FromBody]NewPassword user) {
             //check if user exist
             //check if post return a data password
-            if (String.IsNullOrEmpty(data.Password))
+            if (String.IsNullOrEmpty(user.Password))
             {//generate new random password 
                 var random = Path.GetRandomFileName();
-                response.Password = random.Replace(".", "").Substring(0, 5);
+                user.Password = random.Replace(".", "").Substring(0, 5);
                 //set on bank 
                 
                 //send to email

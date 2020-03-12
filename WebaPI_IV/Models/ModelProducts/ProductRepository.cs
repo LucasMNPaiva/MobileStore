@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using WebaPI_IV.DataBase;
 
 namespace WebaPI_IV.Models
 {
     public class ProductRepository : IProductRepository
     {
-        private List<Product> products = new List<Product>();
-        private int _nextId = 1;
+        static readonly DataAccess data = new DataAccess();
         public Product Add(Product produto)
         {
             //insert product on db
@@ -16,36 +16,30 @@ namespace WebaPI_IV.Models
             {
                 throw new ArgumentNullException("produto");
             }
-            produto.Id = _nextId++;
-            products.Add(produto);
+            data.NewProduct(produto);
             return produto;
-            throw new NotImplementedException();
         }
 
-        public ProductRepository()
-        {
-            //get all products in db to list of products
-        }
         
         public Product Get(int id)
         {
-           return products.Find(p => p.Id == id);
+           return data.GetProducts().Find(p => p.Id == id);
         }
 
         public IEnumerable<Product> GetAll()
         {
-            return products;
+            return data.GetProducts();
         }
 
         public void Remove(int id)
         {
             // delete all products with this ID
-            throw new NotImplementedException();
+            data.DeleteProduct(id);
         }
 
         public bool Update(Product produto)
         {
-            throw new NotImplementedException();
+           return data.UpdateProduct(produto);
         }
     }
 }

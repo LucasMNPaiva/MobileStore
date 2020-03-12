@@ -15,10 +15,10 @@ namespace WebaPI_IV.Controllers
             return View();
         }
 
-        public ActionResult Home()
+        public ActionResult API()
         {
-            ViewBag.Title = "Home Page";
-            return View("home");
+            ViewBag.Title = "API Page";
+            return View("API");
         }
        
     }

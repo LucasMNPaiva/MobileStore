@@ -5,12 +5,14 @@ using System.Net;
 using System.Net.Http;
 using System.Web;
 using System.Web.Http;
+using WebaPI_IV.DataBase;
 using WebaPI_IV.Models;
 
 namespace WebaPI_IV.Controllers
 {
     public class ProductController : ApiController
     {
+        static readonly DataAccess data = new DataAccess();
         static readonly IProductRepository productRepository = new ProductRepository();
         // GET: api/Product
         public IEnumerable<Product> GetAll()
@@ -28,23 +30,30 @@ namespace WebaPI_IV.Controllers
         }
 
         // POST: api/Product
-            [HttpPost]
-            public string[] CreateProduct()
+        [HttpPost]
+        public string[] CreateProduct()
         {
             HttpFileCollection files = HttpContext.Current.Request.Files;
-            //HttpContext.Current.Request.Params["Name"];
-            //HttpContext.Current.Request.Params["Price"];
 
             var path = new string[files.Count];
-            for(var i = 0; i < files.Count; i++)
+            for (var i = 0; i < files.Count; i++)
             {
                 //save new product on SQL database
                 HttpPostedFile file = files[i];
-                string roothPath = "~/Upload/" + Guid.NewGuid()+".png";
+                string roothPath = "~/Upload/" + Guid.NewGuid() + ".png";
                 path[i] = roothPath.Substring(1);
                 file.SaveAs(HttpContext.Current.Server.MapPath(roothPath));
-               
+
             }
+            data.NewProduct(new Product
+            {
+                Name = HttpContext.Current.Request.Params["Name"],
+                Description = HttpContext.Current.Request.Params["Description"],
+                Category = HttpContext.Current.Request.Params["Category"],
+                Price = Double.Parse(HttpContext.Current.Request.Params["Price"]),
+                PathImages = path.ToList()
+            });
+
             return path;
         }
 
@@ -71,7 +80,7 @@ namespace WebaPI_IV.Controllers
 
         public IEnumerable<Product> GetUsersByCategory(string categoria)
         {
-            return productRepository.GetAll().Where(u => string.Equals(u.Category, categoria, StringComparison.OrdinalIgnoreCase));
+            return data.GetProducts().Where(u => string.Equals(u.Category, categoria, StringComparison.OrdinalIgnoreCase));
         }
     }
 }

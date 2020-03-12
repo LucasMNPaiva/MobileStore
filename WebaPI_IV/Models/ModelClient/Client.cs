@@ -13,6 +13,10 @@ namespace WebaPI_IV.Models.ModelClient
         public string Telefone { get; set; }
         public string Email { get; set; }
 
+        public DateTime Aniversario { get; set; }
+
+        public string Endereco { get; set; }
+
         public string Username { get; set; }
         public string Password { get; set; }
     }

@@ -2,34 +2,43 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using WebaPI_IV.DataBase;
 
 namespace WebaPI_IV.Models.ModelClient
 {
     public class ClientRepository : IClient
     {
+
+        static readonly DataAccess data = new DataAccess();
         public Client Add(Client client)
         {
-            throw new NotImplementedException();
+            if (client == null)
+            {
+                throw new ArgumentNullException("produto");
+            }
+            data.NewClient(client);
+            return client;
+
         }
 
         public Client Get(int id)
         {
-            throw new NotImplementedException();
+            return data.GetClients().Find(c => c.Id == id);
         }
 
         public IEnumerable<Client> GetAll()
         {
-            throw new NotImplementedException();
+            return data.GetClients();
         }
 
         public void Remove(int id)
         {
-            throw new NotImplementedException();
+            data.DeleteClient(id);
         }
 
         public bool Update(Client client)
         {
-            throw new NotImplementedException();
+            return data.UpdateClient(client);
         }
     }
 }

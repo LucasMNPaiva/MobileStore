@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web;
 using System.Web.Http;
+using WebaPI_IV.DataBase;
 using WebaPI_IV.Models;
 
 namespace WebaPI_IV.Controllers
@@ -12,7 +13,7 @@ namespace WebaPI_IV.Controllers
     public class UserController : ApiController
     {
         static readonly IUser userRepository = new UserRepository();
-
+        static readonly DataAccess data = new DataAccess();
         public IEnumerable<User> GetAllProducts()
         {
             return userRepository.GetAll();
@@ -25,11 +26,6 @@ namespace WebaPI_IV.Controllers
             if (user == null)
                 throw new HttpResponseException(HttpStatusCode.NotFound);
             return user;
-        }
-
-        public IEnumerable<User> GetUsersByCategory(string categoria)
-        {
-            return userRepository.GetAll().Where(u => string.Equals(u.Categoria, categoria, StringComparison.OrdinalIgnoreCase));
         }
 
         public HttpResponseMessage PostUser([FromBody] User user)
@@ -58,6 +54,11 @@ namespace WebaPI_IV.Controllers
                 throw new HttpResponseException(HttpStatusCode.NotFound);
             }
             userRepository.Remove(id);
+        }
+
+        public IEnumerable<User> GetUsersByCategory(string categoria)
+        {
+            return data.GetUsers().Where(u => string.Equals(u.Categoria, categoria, StringComparison.OrdinalIgnoreCase));
         }
 
     }
