@@ -12,7 +12,7 @@ namespace WebaPI_IV.DataBase
     public class DataAccess
     {
 
-        public string strcon = "Server=127.0.0.1;Port=3306;Database=MobileStore;Uid=root;Pwd=adminadmin;";
+        public string strcon = "Server=127.0.0.1;Port=3306;Database=mobileStore;Uid=newuser;Pwd=adminadmin;";
 
         #region User
         public void ChangePassword(NewPassword data)
@@ -47,16 +47,16 @@ namespace WebaPI_IV.DataBase
         {
             try
             {
-                var query = $@"INSERT INTO users (name,email,username,password,type) VALUES (@name,@email,@username,@password,@type";
+                var query = $@"INSERT INTO users (name,email,username,password_hash,type) VALUES (@name,@email,@username,@password,@type);";
                 using (MySqlConnection con = new MySqlConnection(strcon))
                 {
                     con.Open();
                     var cmd = new MySqlCommand(query, con);
-                    cmd.Parameters.AddWithValue("@name", user.Name);
-                    cmd.Parameters.AddWithValue("@email", user.Email);
-                    cmd.Parameters.AddWithValue("@username", user.Username);
-                    cmd.Parameters.AddWithValue("@password", user.Password);
-                    cmd.Parameters.AddWithValue("@type", user.Categoria);
+                    cmd.Parameters.AddWithValue("name", "");
+                    cmd.Parameters.AddWithValue("email", user.Email);
+                    cmd.Parameters.AddWithValue("username", user.Username);
+                    cmd.Parameters.AddWithValue("password", user.Password);
+                    cmd.Parameters.AddWithValue("type", "admin");
                     cmd.Prepare();
                     cmd.ExecuteNonQuery();
 
@@ -76,7 +76,7 @@ namespace WebaPI_IV.DataBase
             {
                 var users = new List<User>();
 
-                var query = $@"SELECT * FROM Users";
+                var query = $@"SELECT * FROM users";
 
                 using (MySqlConnection con = new MySqlConnection(strcon))
                 {
@@ -112,7 +112,7 @@ namespace WebaPI_IV.DataBase
         }
         public bool UpdateUser(User user)
         {
-            var query = "UPDATE users SET name=@name,email=@email,username=@username,password=@password,type=@type WHERE idClient = @id";
+            var query = "UPDATE users SET name=@name,email=@email,username=@username,password=@password,type=@type WHERE id = @id";
             try
             {
                 using (MySqlConnection con = new MySqlConnection(strcon))
@@ -140,7 +140,7 @@ namespace WebaPI_IV.DataBase
         }
         public void DeleteUser(int id)
         {
-            var query = "DELETE * FROM users WHERE idUser = @id";
+            var query = "DELETE  FROM users WHERE idUser = @id";
             using (MySqlConnection con = new MySqlConnection(strcon))
             {
                 con.Open();
@@ -307,16 +307,16 @@ namespace WebaPI_IV.DataBase
 
         public void NewProduct(Product product)
         {
-            var query = "INSERT INTO products (name,description,price,category) VALUES (@name,@description,@price,@category)";
+            var query = "INSERT INTO products (name,description,price,idcategory) VALUES (@name,@description,@price,@category)";
 
             using (MySqlConnection con = new MySqlConnection(strcon))
             {
                 con.Open();
                 var cmd = new MySqlCommand(query, con);
                 cmd.Parameters.AddWithValue("name", product.Name);
-                cmd.Parameters.AddWithValue("description", product.Description);
+                cmd.Parameters.AddWithValue("description", "");
                 cmd.Parameters.AddWithValue("price", product.Price);
-                cmd.Parameters.AddWithValue("category", product.Category);
+                cmd.Parameters.AddWithValue("category", 1);
                 cmd.Prepare();
                 cmd.ExecuteNonQuery();
                 con.Close();

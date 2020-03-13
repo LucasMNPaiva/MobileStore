@@ -7,7 +7,7 @@
     } ;
             $.ajax({
         type:'POST',
-    url:'https://localhost:44317/api/User',
+    url:'http://127.0.0.1:8080/api/User',
     data:JSON.stringify(user) ,
     contentType:"application/json",
                 success:function(data){
@@ -23,7 +23,7 @@ function DeleteUser() {
 
     $.ajax({
         type: 'DELETE',
-        url: 'https://localhost:44317/api/User/' + id,
+        url: 'http://127.0.0.1:8080/api/User' + id,
 
     })
 }
@@ -37,7 +37,7 @@ function DeleteUser() {
     }
                 $.ajax({
             type:'PUT',
-        url:'https://localhost:44317/api/User/'+$('#idUpdate').val(),
+                    url:'http://127.0.0.1:8080/api/User'+$('#idUpdate').val(),
         data:user
 
     })
@@ -57,7 +57,7 @@ function DeleteUser() {
 
                 $.ajax({
             method:'POST',
-        url:'https://localhost:44317/api/Product/CreateProduct',
+                    url:'http://127.0.0.1:8080/api/Product/CreateProduct',
         data:formData,
         processData:false,
         contentType:false,

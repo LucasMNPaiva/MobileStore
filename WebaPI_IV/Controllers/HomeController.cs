@@ -20,6 +20,11 @@ namespace WebaPI_IV.Controllers
             ViewBag.Title = "API Page";
             return View("API");
         }
-       
+
+        public ActionResult test()
+        {
+            ViewBag.Title = "Teste";
+            return View("test");
+        }
     }
 }

@@ -1,0 +1,55 @@
+﻿<Properties StartupConfiguration="{4548DC76-FC72-4217-9899-F67ADB245832}|">
+  <MonoDevelop.Ide.ItemProperties.WebaPI__IV PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="WebaPI_IV/DataBase/DataAccess.cs">
+    <Files>
+      <File FileName="WebaPI_IV/Views/Home/Index.cshtml" Line="10" Column="27" />
+      <File FileName="WebaPI_IV/Views/Home/test.cshtml" Line="5" Column="17" />
+      <File FileName="WebaPI_IV/Views/Shared/_Layout.cshtml" />
+      <File FileName="WebaPI_IV/Controllers/ProductController.cs" Line="16" Column="77" />
+      <File FileName="WebaPI_IV/Models/ModelProducts/ProductRepository.cs" Line="19" Column="24" />
+      <File FileName="WebaPI_IV/DataBase/DataAccess.cs" Line="311" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="WebAPI4" expanded="True">
+            <Node name="WebaPI_IV" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="DataBase" expanded="True">
+                <Node name="DataAccess.cs" selected="True" />
+              </Node>
+              <Node name="Models" expanded="True">
+                <Node name="ModelProducts" expanded="True" />
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="Shared" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/patrickchagas/dev/MobileStore/WebaPI_IV/Controllers/UserController.cs" relfile="WebaPI_IV/Controllers/UserController.cs" line="33" column="1" />
+      <Breakpoint file="/Users/patrickchagas/dev/MobileStore/WebaPI_IV/Controllers/UserController.cs" relfile="WebaPI_IV/Controllers/UserController.cs" line="34" column="1" />
+      <Breakpoint file="/Users/patrickchagas/dev/MobileStore/WebaPI_IV/Controllers/UserController.cs" relfile="WebaPI_IV/Controllers/UserController.cs" line="35" column="1" />
+      <Breakpoint file="/Users/patrickchagas/dev/MobileStore/WebaPI_IV/Controllers/UserController.cs" relfile="WebaPI_IV/Controllers/UserController.cs" line="36" column="1" />
+      <Breakpoint file="/Users/patrickchagas/dev/MobileStore/WebaPI_IV/DataBase/DataAccess.cs" relfile="WebaPI_IV/DataBase/DataAccess.cs" line="50" column="1" />
+      <Breakpoint file="/Users/patrickchagas/dev/MobileStore/WebaPI_IV/DataBase/DataAccess.cs" relfile="WebaPI_IV/DataBase/DataAccess.cs" line="52" column="1" />
+      <Breakpoint file="/Users/patrickchagas/dev/MobileStore/WebaPI_IV/DataBase/DataAccess.cs" relfile="WebaPI_IV/DataBase/DataAccess.cs" line="54" column="1" />
+      <Breakpoint file="/Users/patrickchagas/dev/MobileStore/WebaPI_IV/DataBase/DataAccess.cs" relfile="WebaPI_IV/DataBase/DataAccess.cs" line="55" column="1" />
+      <Breakpoint file="/Users/patrickchagas/dev/MobileStore/WebaPI_IV/DataBase/DataAccess.cs" relfile="WebaPI_IV/DataBase/DataAccess.cs" line="56" column="1" />
+      <Breakpoint file="/Users/patrickchagas/dev/MobileStore/WebaPI_IV/DataBase/DataAccess.cs" relfile="WebaPI_IV/DataBase/DataAccess.cs" line="51" column="1" />
+      <Breakpoint file="/Users/patrickchagas/dev/MobileStore/WebaPI_IV/Models/ModelProducts/ProductRepository.cs" relfile="WebaPI_IV/Models/ModelProducts/ProductRepository.cs" line="19" column="1" />
+      <Breakpoint file="/Users/patrickchagas/dev/MobileStore/WebaPI_IV/DataBase/DataAccess.cs" relfile="WebaPI_IV/DataBase/DataAccess.cs" line="314" column="1" />
+      <Breakpoint file="/Users/patrickchagas/dev/MobileStore/WebaPI_IV/DataBase/DataAccess.cs" relfile="WebaPI_IV/DataBase/DataAccess.cs" line="308" column="1" />
+      <Breakpoint file="/Users/patrickchagas/dev/MobileStore/WebaPI_IV/DataBase/DataAccess.cs" relfile="WebaPI_IV/DataBase/DataAccess.cs" line="310" column="1" />
+      <Breakpoint file="/Users/patrickchagas/dev/MobileStore/WebaPI_IV/DataBase/DataAccess.cs" relfile="WebaPI_IV/DataBase/DataAccess.cs" line="311" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
